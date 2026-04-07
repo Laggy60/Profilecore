@@ -1,0 +1,18 @@
+database:
+  host: localhost
+  port: 3306
+  database: profilecore
+  username: root
+  password: password
+  pool-name: ProfileCore-Hikari
+  maximum-pool-size: 10
+  minimum-idle: 2
+  connection-timeout: 30000
+  max-lifetime: 1800000
+  keepalive-time: 300000
+
+settings:
+  save-on-quit: true
+  autosave-interval-seconds: 120
+  default-coins: 0
+  current-server-name: lobby

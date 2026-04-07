@@ -1,0 +1,53 @@
+name: ProfileCore
+version: 1.0.0
+main: be.laggy.profilecore.Profilecore
+api-version: '1.21'
+authors: [Laggy]
+softdepend: [Vault, Essentials, EssentialsX, PlaceholderAPI]
+
+commands:
+  profile:
+    description: Main profile command
+    usage: /profile [player|reload|setkills|setdeaths|setcoins|reset]
+    aliases: [prof, pstats]
+    permission: profilecore.command.profile
+
+permissions:
+  profilecore.command.profile:
+    description: Allows usage of /profile
+    default: true
+
+  profilecore.view.others:
+    description: Allows viewing other player profiles
+    default: true
+
+  profilecore.command.reload:
+    description: Allows usage of /profile reload
+    default: op
+
+  profilecore.command.setkills:
+    description: Allows usage of /profile setkills
+    default: op
+
+  profilecore.command.setdeaths:
+    description: Allows usage of /profile setdeaths
+    default: op
+
+  profilecore.command.setcoins:
+    description: Allows usage of /profile setcoins
+    default: op
+
+  profilecore.command.reset:
+    description: Allows usage of /profile reset
+    default: op
+
+  profilecore.admin:
+    description: Full admin access to ProfileCore
+    default: op
+    children:
+      profilecore.command.reload: true
+      profilecore.command.setkills: true
+      profilecore.command.setdeaths: true
+      profilecore.command.setcoins: true
+      profilecore.command.reset: true
+      profilecore.view.others: true
